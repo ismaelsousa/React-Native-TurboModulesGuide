@@ -8,6 +8,7 @@
 import React from 'react';
 import {useState} from 'react';
 import {SafeAreaView, StatusBar, Text, Button} from 'react-native';
+
 import RTNCalculator from 'rtn-calculator/js/NativeCalculator';
 
 const App = () => {
@@ -19,7 +20,7 @@ const App = () => {
       <Button
         title="Compute"
         onPress={async () => {
-          const value = await RTNCalculator?.add(3, 7);
+          const value = await RTNCalculator?.add(3, 10);
           if (value) {
             setResult(value);
           }
