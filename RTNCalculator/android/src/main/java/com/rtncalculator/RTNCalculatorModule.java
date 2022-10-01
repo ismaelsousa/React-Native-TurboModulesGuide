@@ -9,6 +9,7 @@ import com.facebook.react.bridge.ReactContextBaseJavaModule;
 import com.facebook.react.bridge.ReactMethod;
 import java.util.Map;
 import java.util.HashMap;
+import com.calculator.NativeCalculatorSpec;
 
 public class RTNCalculatorModule extends NativeCalculatorSpec {
 
@@ -25,7 +26,7 @@ public class RTNCalculatorModule extends NativeCalculatorSpec {
     }
 
     @Override
-    public void add(double a, double b, Promise promise) {
-        promise.resolve(a + b);
+    public double add(double a, double b) {
+       return a + b;
     }
 }

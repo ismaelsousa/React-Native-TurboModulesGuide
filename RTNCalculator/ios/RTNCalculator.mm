@@ -3,17 +3,15 @@
 
 @implementation RTNCalculator
 
-RCT_EXPORT_MODULE(RTNCalculator)
+RCT_EXPORT_MODULE(RTNCalculator) // <--- This is MACRO
 
 RCT_REMAP_METHOD(add, addA:(NSInteger)a
-                      andB:(NSInteger)b
-                withResolver:(RCTPromiseResolveBlock) resolve
-                withRejecter:(RCTPromiseRejectBlock) reject)
+                      andB:(NSInteger)b)
 {
     NSNumber *result = [[NSNumber alloc] initWithInteger:a+b];
-    resolve(result);
+    return result;
 }
-
+// shared_ptr return an instance from the type facebook::react::TurboModule
 - (std::shared_ptr<facebook::react::TurboModule>)getTurboModule:
     (const facebook::react::ObjCTurboModule::InitParams &)params
 {

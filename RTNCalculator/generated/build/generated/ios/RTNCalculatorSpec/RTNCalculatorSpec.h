@@ -28,10 +28,8 @@
 
 @protocol NativeCalculatorSpec <RCTBridgeModule, RCTTurboModule>
 
-- (void)add:(double)a
-          b:(double)b
-    resolve:(RCTPromiseResolveBlock)resolve
-     reject:(RCTPromiseRejectBlock)reject;
+- (NSNumber *)add:(double)a
+                b:(double)b;
 
 @end
 namespace facebook {

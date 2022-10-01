@@ -19,8 +19,8 @@ const App = () => {
       <Text style={{marginLeft: 20, marginTop: 20}}>3+7={result ?? '??'}</Text>
       <Button
         title="Compute"
-        onPress={async () => {
-          const value = await RTNCalculator?.add(3, 10);
+        onPress={() => {
+          const value = RTNCalculator?.add(3, 7);
           if (value) {
             setResult(value);
           }

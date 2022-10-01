@@ -18,7 +18,7 @@ namespace facebook {
   namespace react {
     
     static facebook::jsi::Value __hostFunction_NativeCalculatorSpecJSI_add(facebook::jsi::Runtime& rt, TurboModule &turboModule, const facebook::jsi::Value* args, size_t count) {
-      return static_cast<ObjCTurboModule&>(turboModule).invokeObjCMethod(rt, PromiseKind, "add", @selector(add:b:resolve:reject:), args, count);
+      return static_cast<ObjCTurboModule&>(turboModule).invokeObjCMethod(rt, NumberKind, "add", @selector(add:b:), args, count);
     }
 
     NativeCalculatorSpecJSI::NativeCalculatorSpecJSI(const ObjCTurboModule::InitParams &params)
