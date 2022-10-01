@@ -5,7 +5,7 @@
 
 RCT_EXPORT_MODULE(RTNCalculator) // <--- This is MACRO
 
-RCT_REMAP_METHOD(add, addA:(NSInteger)a
+RCT_REMAP_BLOCKING_SYNCHRONOUS_METHOD(add, NSNumber*, addA:(NSInteger)a
                       andB:(NSInteger)b)
 {
     NSNumber *result = [[NSNumber alloc] initWithInteger:a+b];
